@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import logo from "./assets/react.svg";
+import ButtonPrimary from "./components/ui/buttons/ButtonPrimary";
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -12,12 +13,12 @@ function App(): ReactElement {
         </div>
         <p className="text-2xl pb-3">Hello Vite + React + tailwindcss!</p>
         <p>
-          <button
-            className="bg-purple-400 pl-2 pr-2 pt-1 pb-1 rounded text-sm text-purple-100"
+          <ButtonPrimary
             onClick={() => setCount((count) => count + 1)}
+            className="bg-purple-400 pl-2 pr-2 pt-1 pb-1 rounded text-sm text-purple-100"
           >
             count is: {count}
-          </button>
+          </ButtonPrimary>
         </p>
         <p className="pb-3 pt-3">
           Edit{" "}
