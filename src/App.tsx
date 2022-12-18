@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from "react";
 import logo from "./assets/react.svg";
 import ButtonPrimary from "./components/ui/buttons/ButtonPrimary";
+import classNames from "./utils/shared/ClassesUtils";
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -15,7 +16,10 @@ function App(): ReactElement {
         <p>
           <ButtonPrimary
             onClick={() => setCount((count) => count + 1)}
-            className="bg-purple-400 pl-2 pr-2 pt-1 pb-1 rounded text-sm text-purple-100"
+            className={classNames(
+              "bg-purple-400 pl-2 pr-2 pt-1 pb-1 rounded text-sm text-purple-100",
+              count > 2 && "bg-black"
+            )}
           >
             count is: {count}
           </ButtonPrimary>

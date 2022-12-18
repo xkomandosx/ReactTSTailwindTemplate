@@ -27,7 +27,8 @@ export const timezones = [
   { label: "(GMT-01:00) Azores", value: "-1" },
   { label: "(GMT+00:00) Casablanca, Monrovia, Reykjavik", value: "0" },
   {
-    label: "(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London",
+    label:
+      "(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London",
     value: "0",
   },
   {
