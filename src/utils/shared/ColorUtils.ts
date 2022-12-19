@@ -1,7 +1,35 @@
-import { Colors } from "@/application/enums/shared/Colors";
-import i18n from "@/locale/i18n";
+enum Colors {
+  UNDEFINED,
+  BLUE_GRAY,
+  COOL_GRAY,
+  GRAY,
+  TRUE_GRAY,
+  WARM_GRAY,
+  RED,
+  ORANGE,
+  AMBER,
+  YELLOW,
+  LIME,
+  GREEN,
+  EMERALD,
+  TEAL,
+  CYAN,
+  LIGHT_BLUE,
+  BLUE,
+  INDIGO,
+  VIOLET,
+  PURPLE,
+  FUCHSIA,
+  PINK,
+  ROSE,
+}
 
-export function getTailwindColor(itemColor: Colors, textWeight = 50, backgroundWeight = 300, borderWeight = 500): string {
+export function getTailwindColor(
+  itemColor: Colors,
+  textWeight = 50,
+  backgroundWeight = 300,
+  borderWeight = 500
+): string {
   let color = "gray";
   switch (itemColor) {
     case 0:
@@ -71,85 +99,7 @@ export function getTailwindColor(itemColor: Colors, textWeight = 50, backgroundW
       color = "rose";
       break;
   }
-  const textColor = textWeight === 0 ? "text-white" : `text-${color}-${textWeight}`;
+  const textColor =
+    textWeight === 0 ? "text-white" : `text-${color}-${textWeight}`;
   return `${textColor} bg-${color}-${backgroundWeight} border border-${color}-${borderWeight}`;
 }
-
-export const colors = [
-  // {
-  //   name: "Indefinido",
-  //   id: 0,
-  // },
-  {
-    name: i18n.t("app.shared.colors.GRAY"),
-    id: 3,
-  },
-  {
-    name: i18n.t("app.shared.colors.BLUE_GRAY"),
-    id: 1,
-  },
-  {
-    name: i18n.t("app.shared.colors.RED"),
-    id: 6,
-  },
-  {
-    name: i18n.t("app.shared.colors.ORANGE"),
-    id: 7,
-  },
-  {
-    name: i18n.t("app.shared.colors.AMBER"),
-    id: 8,
-  },
-  {
-    name: i18n.t("app.shared.colors.YELLOW"),
-    id: 9,
-  },
-  {
-    name: i18n.t("app.shared.colors.LIME"),
-    id: 10,
-  },
-  {
-    name: i18n.t("app.shared.colors.GREEN"),
-    id: 11,
-  },
-  {
-    name: i18n.t("app.shared.colors.EMERALD"),
-    id: 12,
-  },
-  {
-    name: i18n.t("app.shared.colors.TEAL"),
-    id: 13,
-  },
-  {
-    name: i18n.t("app.shared.colors.CYAN"),
-    id: 14,
-  },
-  {
-    name: i18n.t("app.shared.colors.LIGHT_BLUE"),
-    id: 15,
-  },
-  {
-    name: i18n.t("app.shared.colors.BLUE"),
-    id: 16,
-  },
-  {
-    name: i18n.t("app.shared.colors.INDIGO"),
-    id: 17,
-  },
-  {
-    name: i18n.t("app.shared.colors.VIOLET"),
-    id: 18,
-  },
-  {
-    name: i18n.t("app.shared.colors.PURPLE"),
-    id: 19,
-  },
-  {
-    name: i18n.t("app.shared.colors.PINK"),
-    id: 20,
-  },
-  {
-    name: i18n.t("app.shared.colors.ROSE"),
-    id: 21,
-  },
-];
